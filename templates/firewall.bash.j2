@@ -136,3 +136,7 @@ if [ -x "$(which ip6tables 2>/dev/null)" ]; then
 
 fi
 {% endif %}
+{% if firewall_restart_docker %}
+
+systemctl restart docker.service
+{% endif %}
